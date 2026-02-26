@@ -30,7 +30,7 @@ class DevopsLabStack(Stack):
         )
 
         # 3. Permissions (The line you will comment out later to 'break' the app)
-        bucket.grant_write(heartbeat_func)
+        #bucket.grant_write(heartbeat_func)
 
         # 4. CloudWatch Alarm (The trigger for the DevOps Agent)
         error_metric = heartbeat_func.metric_errors(period=Duration.minutes(1))
